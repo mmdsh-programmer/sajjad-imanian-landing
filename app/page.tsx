@@ -1,7 +1,12 @@
 import React from "react";
+import Header from "@/components/header";
+import Hero from "@/components/hero";
 
 export default function Home() {
   return (
-    <p className="font-inter">hello world</p>
-  ); 
+    <main>
+      <Header />
+      <Hero />
+    </main>
+  );
 }

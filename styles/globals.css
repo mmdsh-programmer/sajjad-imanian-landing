@@ -3,4 +3,21 @@
 @theme {
   --font-inter: var(--font-inter);
   --font-instrument-serif: var(--font-instrument-serif);
+  --color-blue: #2134d9;
+  --color-yellow: #DECB26;
+  --color-darkYellow: #DC9E08; 
+  --color-black: #272727;
+  --color-grey: #575757;
+}
+
+body {
+  @apply font-inter;
+}
+
+.container {
+  @apply max-w-[1600px] mx-auto px-10;
+}
+
+.nav-link {
+  @apply uppercase text-blue text-xs font-bold leading-4;
 }
