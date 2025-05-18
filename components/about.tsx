@@ -8,7 +8,7 @@ const About = () => (
       <article>
         <figure className="w-[328px] aspect-square relative float-left mr-4">
           <Image
-            src="/about.jpg"
+            src="/sajjad_imanian_5.jpg"
             alt="About Sajjad Imanian"
             fill
             className="object-cover"

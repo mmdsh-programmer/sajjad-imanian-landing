@@ -15,7 +15,7 @@ const Hero = () => {
           <div className="hero__image flex justify-end">
             <figure className="image-wrapper relative -top-[124px] z-[2]">
               <Image
-                src="/hero-main-image.jpg"
+                src="/sajjad_imanian_1.jpg"
                 alt="hero main image"
                 width={556}
                 height={556}
@@ -51,36 +51,36 @@ const Hero = () => {
         </div>
 
         <div className="grid grid-cols-3 place-content-center justify-center mt-12">
-          <div className="relative w-[328px] h-[418px]">
+          <figure className="relative w-[328px] h-[418px]">
             <Image
-              src="/hero-image-3.jpg"
+              src="/sajjad_imanian_3.jpg"
               alt="hero image 3"
               fill
               className="object-cover"
               priority={false}
               sizes="328px"
             />
-          </div>
-          <div className="justify-self-center -top-28 relative w-[442px] h-[638px]">
+          </figure>
+          <figure className="justify-self-center -top-28 relative w-[442px] h-[638px]">
             <Image
-              src="/hero-image-4.jpg"
+              src="/sajjad_imanian_4.jpg"
               alt="hero image 4"
               fill
               className="object-cover"
               priority={true}
               sizes="442px"
             />
-          </div>
-          <div className="justify-self-end relative w-[328px] h-[253px]">
+          </figure>
+          <figure className="justify-self-end relative w-[328px] h-[253px]">
             <Image
-              src="/hero-image-2.jpg"
+              src="/sajjad_imanian_2.jpg"
               alt="hero image 2"
               fill
               className="object-cover"
               priority={false}
               sizes="328px"
             />
-          </div>
+          </figure>
         </div>
       </div>
     </section>
