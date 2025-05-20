@@ -8,6 +8,7 @@
   --color-dark-yellow: #DC9E08; 
   --color-black: #272727;
   --color-grey: #575757;
+  --color-light-grey: #E4E4E4;
 }
 
 body {
@@ -20,4 +21,12 @@ body {
 
 .nav-link {
   @apply uppercase text-blue text-xs font-bold leading-4;
+}
+
+.cv-list__item {
+  @apply py-9 border-t border-t-light-grey font-bold text-base text-black;
+}
+
+.cv-list__item > .container {
+  @apply flex items-center justify-between;
 }

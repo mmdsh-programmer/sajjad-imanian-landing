@@ -6,12 +6,10 @@ const Customers = () => {
     <section className="mt-20">
       <div className="container">
         <div
-          className="grid"
+          className="grid items-center"
           style={{
             gridTemplateColumns: "repeat(auto-fit, 132px)",
             gridAutoRows: "99px",
-            justifyContent: "center",
-            alignItems: "center",
           }}
         >
           {Array.from({ length: 19 }, (_, i) => (

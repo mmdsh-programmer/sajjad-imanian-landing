@@ -5,16 +5,22 @@ import About from "@/components/about";
 import Gallery from "@/components/gallery";
 import History from "@/components/history";
 import Customers from "@/components/customers";
+import Cv from "@/components/cv";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Header />
-      <Hero />
-      <About />
-      <Gallery />
-      <History />
-      <Customers />
-    </main>
+      <main>
+        <Hero />
+        <About />
+        <Gallery />
+        <History />
+        <Customers />
+        <Cv />
+      </main>
+      <Footer />
+    </>
   );
 }

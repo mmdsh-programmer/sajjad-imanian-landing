@@ -140,3 +140,21 @@ export const UnderlineIcon = ({ className }: IProps) => {
     </svg>
   );
 };
+
+export const ArrowOutwardIcon = ({ className }: IProps) => {
+  return (
+    <svg
+      width="13"
+      height="13"
+      viewBox="0 0 13 13"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M2.54167 12.6875L0.6875 10.8333L8.20833 3.3125H1.72917V0.6875H12.6875V11.6458H10.0625V5.16667L2.54167 12.6875Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};
