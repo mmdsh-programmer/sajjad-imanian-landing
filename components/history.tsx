@@ -20,6 +20,7 @@ const History = () => {
             width={442}
             height={295}
             className="object-cover w-[442px] h-[295px] order-first md:order-last"
+            style={{ width: "auto", height: "auto" }}
           />
         </div>
       </div>

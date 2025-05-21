@@ -21,6 +21,7 @@ const Customers = () => {
                 src={`/customer${i + 1}.png`}
                 alt={`customer ${i + 1}`}
                 fill
+                sizes="(max-width: 768px) 50vw, 132px"
                 className="object-contain grayscale"
               />
             </div>
