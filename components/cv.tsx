@@ -35,16 +35,16 @@ const Cv = () => {
           return (
             <li className="cv-list__item" key={`cv-item-${index}`}>
               <div className="container">
-                <p className="cv-list__item-text">{item.text}</p>
-                <span className="cv-list__item-time">{item.time}</span>
+                <p className="cv-list__item-text text-lg">{item.text}</p>
+                <span className="cv-list__item-time text-grey text-[16px]">{item.time}</span>
               </div>
             </li>
           );
         })}
       </ul>
 
-      <div className="container flex items-center gap-5 mt-[43px]">
-        <p className="font-instrument-serif text-3xl leading-10 text-black">
+      <div className="container flex flex-col md:flex-row items-center gap-1.5 md:gap-5 mt-[120px] mb-[120px] md:mt-[43px] md:mb-0">
+        <p className="font-instrument-serif text-3xl leading-10 text-black text-center md:text-left">
           To see my full work experience and tournaments I attended
         </p>
         <a
