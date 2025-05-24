@@ -6,22 +6,17 @@ const Customers = () => {
     <section className="mt-20">
       <div className="container">
         <div
-          className="grid items-center"
-          style={{
-            gridTemplateColumns: "repeat(auto-fit, 132px)",
-            gridAutoRows: "99px",
-          }}
+          className="grid grid-cols-3 gap-4 items-center md:[grid-template-columns:repeat(auto-fit,_minmax(132px,_1fr))] md:[grid-auto-rows:99px]"
         >
           {Array.from({ length: 19 }, (_, i) => (
             <div
               key={i + 1}
-              className="flex items-center justify-center relative w-[112px] h-[79px]"
+              className="flex items-center justify-center relative w-full md:w-[112px] h-[79px]"
             >
               <Image
                 src={`/customer${i + 1}.png`}
                 alt={`customer ${i + 1}`}
                 fill
-                sizes="(max-width: 768px) 50vw, 132px"
                 className="object-contain grayscale"
               />
             </div>

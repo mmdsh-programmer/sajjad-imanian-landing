@@ -34,27 +34,14 @@ const Cv = () => {
         {items.map((item, index) => {
           return (
             <li className="cv-list__item" key={`cv-item-${index}`}>
-              <div className="container">
-                <p className="cv-list__item-text text-lg">{item.text}</p>
-                <span className="cv-list__item-time text-grey text-[16px]">{item.time}</span>
+              <div className="container text-[16px] leading-[18px]">
+                <p className="cv-list__item-text text-black">{item.text}</p>
+                <span className="cv-list__item-time text-grey">{item.time}</span>
               </div>
             </li>
           );
         })}
       </ul>
-
-      <div className="container flex flex-col md:flex-row items-center gap-1.5 md:gap-5 mt-[120px] mb-[120px] md:mt-[43px] md:mb-0">
-        <p className="font-instrument-serif text-3xl leading-10 text-black text-center md:text-left">
-          To see my full work experience and tournaments I attended
-        </p>
-        <a
-          className="donwload-cv font-instrument-serif text-3xl leading-10 text-dark-yellow decoration-1 underline underline-offset-[5px]"
-          href="/cv.pdf"
-          download="/cv.pdf"
-        >
-          Download my CV
-        </a>
-      </div>
     </section>
   );
 };
