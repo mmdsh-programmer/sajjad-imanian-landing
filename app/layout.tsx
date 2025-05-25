@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import React from "react";
 import { Inter, Instrument_Serif } from "next/font/google";
-import ScrollProvider from "@/components/scrollProvider";
 import "@styles/globals.css";
 
 const inter = Inter({
@@ -32,9 +31,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${instrumentSerif.variable} antialiased`}
       >
-        <ScrollProvider>
-          {children}
-        </ScrollProvider>
+        {children}
       </body>
     </html>
   );

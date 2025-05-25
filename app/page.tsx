@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main className="relative z-10 min-h-screen bg-white">
         <Hero />
         <About />
         <Gallery />

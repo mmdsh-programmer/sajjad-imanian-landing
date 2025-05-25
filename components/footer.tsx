@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-yellow pt-[104px] pb-8 mt-14">
+    <footer className="sticky bottom-0 z-0 bg-yellow pt-[104px] pb-8">
       <div className="container">
         <span className="text-white text-xl block text-center font-bold">
           Let’s connect
