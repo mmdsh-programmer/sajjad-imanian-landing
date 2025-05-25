@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
 import React from "react";
+import type { Metadata } from "next";
 import { Inter, Instrument_Serif } from "next/font/google";
 import "@styles/globals.css";
 

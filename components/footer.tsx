@@ -1,12 +1,12 @@
-import { ArrowOutwardIcon } from "@/assets/svg";
 import React from "react";
+import { ArrowOutwardIcon } from "@/assets/svg";
 
 const Footer = () => {
   return (
-    <footer className="sticky bottom-0 z-0 bg-yellow pt-[104px] pb-8">
+    <div className="bg-yellow w-full h-full flex flex-col justify-center pt-[104px] pb-8">
       <div className="container">
         <span className="text-white text-xl block text-center font-bold">
-          Let’s connect
+          Let&apos;s connect
         </span>
 
         <h2 className="text-[27px] leading-9 md:text-4xl text-black text-center mt-16 font-bold tracking-[-2px] lg:racking-[-3px]">
@@ -56,7 +56,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
+    </div>
   );
 };
 
