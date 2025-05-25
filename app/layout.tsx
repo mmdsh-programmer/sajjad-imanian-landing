@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Instrument_Serif } from "next/font/google";
-import "@styles/globals.css";
 import React from "react";
+import { Inter, Instrument_Serif } from "next/font/google";
 import ScrollProvider from "@/components/scrollProvider";
+import "@styles/globals.css";
 
 const inter = Inter({
   subsets: ["latin"],

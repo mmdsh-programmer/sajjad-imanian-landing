@@ -1,16 +1,20 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 
+type LocomotiveScrollInstance = {
+  destroy: () => void;
+};
+
 type ScrollProviderProps = {
   children: React.ReactNode;
 };
 
 const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const locoScrollRef = useRef<any>(null);
+  const locoScrollRef = useRef<LocomotiveScrollInstance | null>(null);
 
   useEffect(() => {
-    let scrollInstance: any;
+    let scrollInstance: LocomotiveScrollInstance | null = null;
     const startLoco = async () => {
       if (scrollRef.current) {
         const LocomotiveScroll = (await import("locomotive-scroll")).default;
