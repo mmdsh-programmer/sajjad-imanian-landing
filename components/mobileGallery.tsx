@@ -1,16 +1,16 @@
-import React from "react";
 import Image from "next/image";
+import React from "react";
 
-const Gallery = () => {
+const MobileGallery = () => {
   return (
-    <section className="hidden lg:block mt-20 lg:mt-28">
-      <div className="grid md:flex gap-4 overflow-hidden items-end">
+    <section className="grid gap-4 lg:hidden mt-20">
+      <div className="container grid gap-4 grid-cols-[1.5fr_1fr] grid-rows-[183px_222px]">
         <Image
           src="/sajjad_imanian_14.jpg"
           alt="gallery image"
           width={338}
           height={210}
-          className="object-cover w-[232px] h-[183px] lg:w-[338px] lg:h-[210px] flex-none"
+          className="object-cover w-full h-full"
           priority
         />
         <Image
@@ -18,7 +18,7 @@ const Gallery = () => {
           alt="gallery image"
           width={213}
           height={298}
-          className="object-cover w-[150px] h-[183px] lg:w-[213px] lg:h-[298px] flex-none"
+          className="object-cover w-full h-full flex-none"
           priority
         />
         <Image
@@ -26,73 +26,69 @@ const Gallery = () => {
           alt="gallery image"
           width={459}
           height={235}
-          className="object-cover w-[342px] h-[222px] lg:w-[459px] lg:h-[235px] flex-none"
+          className="object-cover w-full h-full col-span-2 flex-none"
           priority
         />
-        <Image
-          src="/sajjad_imanian_6.jpg"
-          alt="gallery image"
-          width={216}
-          height={235}
-          className="object-cover w-[167px] h-[257px] lg:w-[216px] lg:h-[235px] flex-none"
-          priority
-        />
+      </div>
+      <div className="container grid gap-4 grid-cols-[1fr_1.5fr] grid-rows-[183px_222px]">
         <Image
           src="/sajjad_imanian_6.jpg"
           alt="gallery image"
           width={338}
           height={210}
-          className="object-cover w-[167px] h-[257px] lg:w-[338px] lg:h-[210px] flex-none"
-          priority
-        />
-      </div>
-      <div className="flex gap-4 overflow-hidden mt-4">
-        <Image
-          src="/sajjad_imanian_16.jpg"
-          alt="gallery image"
-          width={388}
-          height={210}
-          className="object-cover w-[317px] h-[238px] lg:w-[388px] lg:h-[210px] flex-none"
+          className="object-cover w-full h-full"
           priority
         />
         <Image
-          src="/sajjad_imanian_3.jpg"
+          src="/sajjad_imanian_14.jpg"
           alt="gallery image"
-          width={178}
-          height={177}
-          className="object-cover w-[200px] h-[300px] lg:w-[178px] lg:h-[177px] flex-none"
+          width={213}
+          height={298}
+          className="object-cover w-full h-full flex-none"
           priority
         />
         <Image
           src="/sajjad_imanian_11.jpg"
           alt="gallery image"
-          width={328}
-          height={245}
-          className="object-cover w-[386px] h-[257px] lg:w-[328px] lg:h-[245px] flex-none"
+          width={459}
+          height={235}
+          className="object-cover w-full h-full col-span-2 flex-none"
           priority
         />
+      </div>
+      <div className="container grid gap-4 grid-cols-[1.5fr_1fr] grid-rows-[183px]">
         <Image
-          src="/sajjad_imanian_8.jpg"
+          src="/sajjad_imanian_16.jpg"
           alt="gallery image"
-          width={178}
-          height={267}
-          className="object-cover w-[214px] h-[214px] lg:w-[178px] lg:h-[267px] flex-none"
-          priority
-        />
-        <Image
-          src="/sajjad_imanian_8.jpg"
-          alt="gallery image"
-          width={388}
+          width={338}
           height={210}
-          className="object-cover w-[214px] h-[214px] lg:w-[388px] lg:h-[210px] flex-none"
+          className="object-cover w-full h-full"
+          priority
+        />
+        <Image
+          src="/sajjad_imanian_3.jpg"
+          alt="gallery image"
+          width={213}
+          height={298}
+          className="object-cover w-full h-full flex-none"
+          priority
+        />
+      </div>
+      <div className="container grid gap-4 grid-cols-[1fr_1.5fr] grid-rows-[231px]">
+        <Image
+          src="/sajjad_imanian_10.jpg"
+          alt="gallery image"
+          width={338}
+          height={210}
+          className="object-cover w-full h-full"
           priority
         />
         <Image
           src="/sajjad_imanian_8.jpg"
           alt="gallery image"
-          width={178}
-          height={177}
-          className="object-cover w-[214px] h-[214px] lg:w-[178px] lg:h-[177px] flex-none"
+          width={213}
+          height={298}
+          className="object-cover w-full h-full flex-none"
           priority
         />
       </div>
@@ -122,4 +118,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default MobileGallery;

@@ -7,6 +7,7 @@ import History from "@/components/history";
 import Customers from "@/components/customers";
 import Cv from "@/components/cv";
 import Footer from "@/components/footer";
+import MobileGallery from "@/components/mobileGallery";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <About />
         <Gallery />
+        <MobileGallery />
         <History />
         <Customers />
         <Cv />
