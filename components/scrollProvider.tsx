@@ -1,15 +1,16 @@
 "use client";
+
 import React, { useEffect, useRef } from "react";
 
-type LocomotiveScrollInstance = {
+interface LocomotiveScrollInstance {
   destroy: () => void;
 };
 
-type ScrollProviderProps = {
+interface IProps {
   children: React.ReactNode;
 };
 
-const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
+const ScrollProvider = ({ children }: IProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const locoScrollRef = useRef<LocomotiveScrollInstance | null>(null);
 
