@@ -13,14 +13,13 @@ const History = () => {
           <p>in over 16 tournaments through 2017-2025</p>
         </div>
 
-        <div className="container !px-0 xs:!px-4 order-first md:order-last">
+        <div className="container overflow-hidden !pr-0 xs:!px-4 order-first md:order-last md:grid justify-end">
           <Image
             src="/sajjad_imanian_7.jpg"
             alt="history"
             width={442}
             height={295}
-            className="object-cover w-[442px] h-[295px]"
-            style={{ width: "auto", height: "auto" }}
+            className="object-cover w-full lg:w-[442px] h-auto"
           />
         </div>
       </div>

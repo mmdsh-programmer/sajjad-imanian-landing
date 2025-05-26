@@ -1,8 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import { SmileIcon } from "@/assets/svg";
+import { Parallax } from "react-scroll-parallax";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const Hero = () => {
+  const isMobile = useIsMobile();
   return (
     <section className="hero bg-yellow overflow-hidden">
       <div className="container !px-0 lg:!px-10">
@@ -13,15 +16,17 @@ const Hero = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 mt-[34px] lg:mt-14">
           <div className="hero__image flex justify-center lg:justify-end">
-            <figure className="image-wrapper relative -top-[124px] z-[2]">
-              <Image
-                src="/sajjad_imanian_1.jpg"
-                alt="hero main image"
-                width={556}
-                height={556}
-                className="object-cover lg:ml-[116px]"
-                priority
-              />
+            <figure className="image-wrapper relative z-[2]">
+              <Parallax translateY={[10, -70]}>
+                <Image
+                  src="/sajjad_imanian_1.jpg"
+                  alt="hero main image"
+                  width={556}
+                  height={556}
+                  className="object-cover lg:ml-[116px]"
+                  priority
+                />
+              </Parallax>
             </figure>
           </div>
 
@@ -42,46 +47,52 @@ const Hero = () => {
         </div>
 
         <div className="mt-[104px] lg:mt-0 -tracking-[2px]">
-          <span className="block text-black font-bold text-center text-[42px] leading-[44px]">
-            Photographed & content created
+          <span className="block text-black font-bold text-center text-[32px] leading-[34px]">
+            Photographed & <br className="inline md:hidden" /> content created
           </span>
           <span className="block text-white text-center font-instrument-serif text-[42px] leading-[44px] mix-blend-difference relative z-50 italic">
-            in over 16 tournaments through 2018-2025
+            in over 16 tournaments <br className="inline md:hidden" /> through 2018-2025
           </span>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 place-content-center justify-center mt-12">
-          <figure className="justify-self-center lg:justify-self-start relative max-w-[442px] w-full lg:w-[328px] h-[649px] lg:h-[418px] order-2 lg:order-1">
-            <Image
-              src="/sajjad_imanian_3.jpg"
-              alt="hero image 3"
-              fill
-              className="object-cover"
-              priority={false}
-              sizes="328px"
-            />
+          <figure className="justify-self-center lg:justify-self-start relative max-w-[442px] w-full lg:w-[328px] h-[649px] lg:h-[418px] order-2 lg:order-1" style={{ position: 'relative', width: '100%', height: '649px' }}>
+            <Parallax translateY={isMobile ? [10, -20] : [40, -80]} style={{ width: '100%', height: '100%' }}>
+              <Image
+                src="/sajjad_imanian_3.jpg"
+                alt="hero image 3"
+                fill
+                className="object-cover"
+                priority={false}
+                sizes="328px"
+              />
+            </Parallax>
           </figure>
 
-          <figure className="justify-self-center lg:-top-28 relative max-w-[442px] w-full lg:w-[442px] h-[638px] order-1 lg:order-2">
-            <Image
-              src="/sajjad_imanian_4.jpg"
-              alt="hero image 4"
-              fill
-              className="object-cover"
-              priority={true}
-              sizes="442px"
-            />
+          <figure className="justify-self-center lg:-top-28 relative max-w-[442px] w-full lg:w-[442px] h-[638px] order-1 lg:order-2" style={{ position: 'relative', width: '100%', height: '638px' }}>
+            <Parallax translateY={isMobile ? [5, -10] : [10, -20]} style={{ width: '100%', height: '100%' }}>
+              <Image
+                src="/sajjad_imanian_4.jpg"
+                alt="hero image 4"
+                fill
+                className="object-cover"
+                priority={true}
+                sizes="442px"
+              />
+            </Parallax>
           </figure>
 
-          <figure className="justify-self-center lg:justify-self-end relative max-w-[442px] w-full lg:w-[328px] h-[253px] order-3 lg:order-3">
-            <Image
-              src="/sajjad_imanian_2.jpg"
-              alt="hero image 2"
-              fill
-              className="object-cover"
-              priority={false}
-              sizes="328px"
-            />
+          <figure className="justify-self-center lg:justify-self-end relative max-w-[442px] w-full lg:w-[328px] h-[253px] order-3 lg:order-3" style={{ position: 'relative', width: '100%', height: '253px' }}>
+            <Parallax translateY={isMobile ? [10, -20] : [40, -80]} style={{ width: '100%', height: '100%' }}>
+              <Image
+                src="/sajjad_imanian_2.jpg"
+                alt="hero image 2"
+                fill
+                className="object-cover"
+                priority={false}
+                sizes="328px"
+              />
+            </Parallax>
           </figure>
         </div>
       </div>

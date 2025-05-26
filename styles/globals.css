@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-  @apply max-w-[1600px] mx-auto lg:px-10 px-4;
+  @apply max-w-[1920px] mx-auto lg:px-10 px-4;
 }
 
 .nav-link {

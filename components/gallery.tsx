@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Gallery = () => {
   return (
-    <section className="hidden lg:block mt-20 lg:mt-28">
+    <section className="hidden lg:block mt-20 lg:mt-28 max-w-[1920px] mx-auto">
       <div className="grid md:flex gap-4 overflow-hidden items-end">
         <Image
           src="/sajjad_imanian_14.jpg"
@@ -97,7 +97,7 @@ const Gallery = () => {
         />
       </div>
 
-      <div className="container grid gap-4 text-center !max-w-[570px] text-grey font-bold text-[28px] leading-[30px] py-[200px] mt-[104px] -tracking-wider">
+      <div className="container grid gap-4 text-center !max-w-[570px] text-grey font-bold text-[24px] leading-[30px] py-[200px] mt-[104px] -tracking-wider">
         <p>Football</p>
         <Image
           src="/sajjad_imanian_6.jpg"
@@ -108,7 +108,7 @@ const Gallery = () => {
         />
         <p className="flex-1 min-w-0 break-words">
           is where my{" "}
-          <span className="font-instrument-serif italic font-normal tracking-tighter">
+          <span className="font-instrument-serif italic font-normal tracking-tighter text-3xl">
             love & passion
           </span>{" "}
           meets the my expertises &amp; my beautiful

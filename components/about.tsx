@@ -6,7 +6,7 @@ const About = () => (
   <section className="pt-14 lg:pt-[104px] pb-7">
     <div className="container">
       <article>
-        <figure className="w-[213px] aspect-square relative md:float-left md:mr-4">
+        <figure className="w-[150px] lg:w-[213px] aspect-square relative md:float-left md:mr-4">
           <Image
             src="/sajjad_imanian_5.jpg"
             alt="About Sajjad Imanian"
@@ -16,7 +16,7 @@ const About = () => (
           />
         </figure>
         <header>
-          <p className="font-bold text-[#272727] text-[32px] leading-[34px] lg:text-[42px] lg:leading-[44px] clear-none pt-4 md:pt-[230px] lg:pt-[130px] tracking-tighter">
+          <p className="font-bold text-[#272727] text-[32px] leading-[34px] lg:text-[42px] lg:leading-[44px] clear-none pt-4 md:pt-[165px] lg:pt-[130px] tracking-tighter">
             My journey in the world of social media and content creation began
             at the age of 16 with one of Iran&apos;s prominent newspapers, and I
             have continued to evolve and thrive in this field over the past
