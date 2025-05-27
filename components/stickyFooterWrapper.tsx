@@ -17,16 +17,16 @@ const StickyFooterWrapper = ({ children }: IProps) => {
   return (
     <footer
       className="relative"
-      style={{ height: height ? `${height}px` : undefined, clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
+      style={{
+        height: height ? `${height}px` : undefined,
+        clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)",
+      }}
     >
-      <div
-        className="fixed bottom-0 w-full"
-        style={{ height: height ? `${height}px` : undefined }}
-      >
+      <div className="fixed bottom-0 w-full">
         <div ref={contentRef}>{children}</div>
       </div>
     </footer>
   );
 };
 
-export default StickyFooterWrapper; 
+export default StickyFooterWrapper;
