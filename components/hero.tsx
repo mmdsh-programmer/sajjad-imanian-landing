@@ -75,38 +75,56 @@ const Hero = () => {
             </span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 place-content-center justify-center mt-12">
-            <figure className="justify-self-center lg:justify-self-start relative max-w-[442px] w-full lg:w-[328px] h-[649px] lg:h-[418px] order-2 lg:order-1">
-              <Image
-                src="/sajjad_imanian_3.jpg"
-                alt="hero image 3"
-                fill
-                className="object-cover"
-                priority={false}
-                sizes="328px"
-              />
+          <div className="grid grid-cols-1 lg:grid-cols-3 place-content-center justify-center lg:mt-12 -translate-y-10 lg:translate-y-0">
+            <figure className="w-full lg:w-fit max-w-[442px] h-fit justify-self-center lg:justify-self-start order-2 lg:order-1">
+              <Parallax speed={7}>
+                <div className="overflow-hidden">
+                  <Parallax scale={[1, 1.2]}>
+                    <Image
+                      src="/sajjad_imanian_3.jpg"
+                      alt="hero image 3"
+                      width={328}
+                      height={418}
+                      priority={false}
+                      className="object-cover w-full lg:w-[328px] h-auto lg:h-[418px]"
+                    />
+                  </Parallax>
+                </div>
+              </Parallax>
             </figure>
 
-            <figure className="justify-self-center lg:-top-20 relative max-w-[442px] w-full lg:w-[442px] h-[638px] order-1 lg:order-2">
-              <Image
-                src="/sajjad_imanian_4.jpg"
-                alt="hero image 4"
-                fill
-                className="object-cover"
-                priority={true}
-                sizes="442px"
-              />
+            <figure className="w-full lg:w-fit max-w-[442px] justify-self-center lg:-translate-y-20 order-1 lg:order-2">
+              <Parallax speed={3}>
+                <div className="overflow-hidden">
+                  <Parallax scale={[1, 1.2]}>
+                    <Image
+                      src="/sajjad_imanian_4.jpg"
+                      alt="hero image 4"
+                      width={442}
+                      height={638}
+                      className="object-cover w-full lg:w-[442px] h-auto lg:h-[638px]"
+                      priority={false}
+                    />
+                  </Parallax>
+                </div>
+              </Parallax>
             </figure>
 
-            <figure className="justify-self-center lg:justify-self-end relative max-w-[442px] w-full lg:w-[328px] h-[253px] order-3 lg:order-3">
-              <Image
-                src="/sajjad_imanian_2.jpg"
-                alt="hero image 2"
-                fill
-                className="object-cover"
-                priority={false}
-                sizes="328px"
-              />
+            <figure className="w-full lg:w-fit max-w-[442px] justify-self-center lg:justify-self-end relative order-3 lg:order-3">
+              <Parallax speed={7}>
+                <div className="overflow-hidden">
+                  <Parallax scale={[1, 1.2]}>
+                    <Image
+                      src="/sajjad_imanian_2.jpg"
+                      alt="hero image 2"
+                      width={328}
+                      height={253}
+                      className="object-cover w-full lg:w-[328px] h-auto lg:h-[253px]"
+                      priority={false}
+                    />
+                  </Parallax>
+                </div>
+              </Parallax>
             </figure>
           </div>
         </section>
