@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { SmileIcon } from "@/assets/svg";
 import { Parallax } from "react-scroll-parallax";
 
 const Hero = () => {
+  const [parallaxReady, setParallaxReady] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setParallaxReady(true), 50);
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <section className="hero bg-yellow overflow-hidden">
       <div className="container !px-0 lg:!px-10">
@@ -19,14 +26,20 @@ const Hero = () => {
             <div className="hero__image flex justify-center lg:justify-end">
               <figure className="image-wrapper -translate-y-24 relative z-[2]">
                 <Parallax speed={15}>
-                  <div className="overflow-hidden">
-                    <Parallax speed={-8}>
+                  <div
+                    style={{
+                      opacity: parallaxReady ? 1 : 0,
+                      transition: "opacity 0.3s",
+                    }}
+                    className="overflow-hidden w-full h-full md:w-[556px] aspect-square lg:ml-[116px]"
+                  >
+                    <Parallax scale={[1, 1.3]}>
                       <Image
                         src="/sajjad_imanian_1.jpg"
                         alt="hero main image"
                         width={556}
                         height={556}
-                        className="object-cover lg:ml-[116px]"
+                        className="object-cover"
                         priority
                       />
                     </Parallax>
