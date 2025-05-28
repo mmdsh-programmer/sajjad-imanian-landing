@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import { Inter, Instrument_Serif } from "next/font/google";
-import AppProvider from "@/components/appProvider";
+import Providers from "@/components/providers";
 import "@styles/globals.css";
 
 const inter = Inter({
@@ -33,9 +33,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${instrumentSerif.variable} antialiased`}
       >
-        <AppProvider>
+        <Providers>
           {children}
-        </AppProvider>
+        </Providers>
       </body>
     </html>
   );
