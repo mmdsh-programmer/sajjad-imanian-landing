@@ -24,7 +24,7 @@ const Hero = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 mt-[34px] lg:mt-14">
             <div className="hero__image flex justify-center lg:justify-end">
-              <figure className="image-wrapper -translate-y-24 relative z-[2]">
+              <figure className="image-wrapper -translate-y-12 md:-translate-y-24 relative z-[2]">
                 <Parallax speed={15}>
                   <div
                     style={{
