@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 
-const useIsMobile = () => {
-  const [isMobile, setIsMobile] = useState(false);
+const useScreenMatch = (size: number) => {
+  const [isMatch, setIsMatch] = useState(false);
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+    const checkMobile = () => setIsMatch(window.innerWidth < size);
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
-  return isMobile;
+  return isMatch;
 };
 
-export default useIsMobile; 
+export default useScreenMatch; 
