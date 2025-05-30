@@ -9,7 +9,7 @@ import GalleryImageRow from "./galleryImageRow";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Gallery = () => {
+const DesktopGallery = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const row1Ref = useRef<HTMLDivElement>(null);
   const row2Ref = useRef<HTMLDivElement>(null);
@@ -30,7 +30,7 @@ const Gallery = () => {
         ease: "none",
         scrollTrigger: {
           trigger: section,
-          start: "top 20%",
+          start: "top 10%",
           end: () => `+=${horizontalScrollLength}`,
           scrub: true,
           pin: true,
@@ -43,7 +43,7 @@ const Gallery = () => {
         ease: "none",
         scrollTrigger: {
           trigger: section,
-          start: "top 20%",
+          start: "top 10%",
           end: () => `+=${horizontalScrollLength}`,
           scrub: true,
           pin: false,
@@ -76,4 +76,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default DesktopGallery;
