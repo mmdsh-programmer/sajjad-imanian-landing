@@ -4,6 +4,9 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { SmileIcon } from "@/assets/svg";
 import { Parallax } from "react-scroll-parallax";
+import { TextMask, TextMaskParagraph } from "../textMask";
+import { motion } from "framer-motion";
+import ImageMask from "../imageMask";
 
 const Hero = () => {
   const [parallaxReady, setParallaxReady] = useState(false);
@@ -19,8 +22,12 @@ const Hero = () => {
         <section className="min-h-screen">
           <div className="flex justify-center w-full">
             <h1 className="flex flex-col lg:flex-row lg:justify-center lg:gap-[64px] text-white font-black text-[calc((clamp(78px,11.8vw,220px)-10px))] xs:text-[calc((clamp(96px,11.8vw,220px)-10px))] uppercase w-full max-w-[1400px] text-center pt-12 leading-[80%] lg:leading-[100%] -tracking-wider">
-              <span className="z-[1]">Sajad</span>
-              <span className="z-10">Imanian</span>
+              <span className="z-[1]">
+                <TextMask text="Sajad" delay={0.2} speed={0.03} />
+              </span>
+              <span className="z-10">
+                <TextMask text="Imanian" delay={0.4} speed={0.03} />
+              </span>
             </h1>
           </div>
 
@@ -36,13 +43,14 @@ const Hero = () => {
                     className="overflow-hidden w-full h-full md:w-[556px] aspect-square lg:ml-[116px]"
                   >
                     <Parallax scale={[1, 1.3]}>
-                      <Image
+                      <ImageMask
                         src="/sajjad_imanian_1.jpg"
                         alt="hero main image"
                         width={556}
                         height={556}
-                        className="object-cover"
-                        priority
+                        duration={1.2}
+                        delay={0.3}
+                        ease="power2.out"
                       />
                     </Parallax>
                   </div>
@@ -52,14 +60,26 @@ const Hero = () => {
 
             <div className="hero__context">
               <div className="context-wrapper text-black flex flex-col items-center lg:ml-24 font-instrument-serif text-[32px] leading-[34px] text-center -tracking-[1px]">
-                <SmileIcon className="w-12 h-12 fill-black" />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.5, duration: 0.4 }}
+                >
+                  <SmileIcon className="w-12 h-12 fill-black" />
+                </motion.div>
                 <p className="block mt-14">
-                  social media manager
-                  <br />
-                  content creator & photographer
-                  <span className="block underline decoration-1 underline-offset-[6px] italic mb-[67px]">
-                    currently works at AFC
-                  </span>
+                  <TextMaskParagraph
+                    text={"social media manager\ncontent creator & photographer"}
+                    delay={0.4}
+                    speed={0.02}
+                    lineDelay={0.1}
+                  />
+                  <TextMask
+                    text="currently works at AFC"
+                    delay={0.7}
+                    speed={0.02}
+                    className="block underline decoration-1 underline-offset-[6px] italic mb-[67px]"
+                  />
                 </p>
               </div>
             </div>
