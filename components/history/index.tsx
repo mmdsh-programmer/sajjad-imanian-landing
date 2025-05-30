@@ -3,10 +3,10 @@
 import React from "react";
 import Image from "next/image";
 import { Parallax } from "react-scroll-parallax";
-import useScreenMatch from "@/hooks/useScreenMatch";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 const History = () => {
-  const isMobile = useScreenMatch(768);
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   return (
     <section className="mt-[104px]">
